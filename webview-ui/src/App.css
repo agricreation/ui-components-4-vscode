@@ -51,4 +51,6 @@
 }
 .text_field{
   margin-right: 10px;
+  width: 50vw;
+  /* padding: 15px; */
 }

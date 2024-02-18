@@ -1,10 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store, { AppStore } from './store/store'; // Import the store and its type definition
+import App from './App';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store as AppStore}> {/* Cast store to the AppStore type */}
     <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+  </Provider>,
+  document.getElementById('root')
 );
